@@ -18,7 +18,7 @@ These scripts automate and standardize the workflow for processing raw FASTQ fil
    ```bash
    bash split_fastqs.sh
    ```
-   This will seperate the fastq files (I1, R1, R2 or I1, I2, R1, R2) based on Cell Ranger sample ID into 4 roughly equal batches. This done so the Cell Ranger Count pipeline does not crash the node!
+   This will seperate the FASTQ files (I1, R1, R2 or I1, I2, R1, R2) based on Cell Ranger sample ID into 4 roughly equal batches. This is done so the Cell Ranger Count pipeline does not crash the TSCC node!
 
 2. **Run the Cell Ranger/ATAC Count Pipeline**  
   If snRNAseq data  
