@@ -1,4 +1,4 @@
-# ad-brain-regions-study
-AD (Alzheimer's Disease) Brain Regions Study
+# AD (Alzheimer's Disease) Brain Regions Study
+ad-brain-regions-study
 
 TBC...
