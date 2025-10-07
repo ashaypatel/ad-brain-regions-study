@@ -18,7 +18,7 @@ These scripts automate and standardize the workflow for processing raw FASTQ fil
    ```bash
    bash split_fastqs.sh
    ```
-   This will seperate the FASTQ files (I1, R1, R2 or I1, I2, R1, R2) based on Cell Ranger sample ID into 4 roughly equal batches. This is done so the Cell Ranger Count pipeline does not crash the TSCC node!
+   This will seperate the FASTQ files (I1, R1, R2 or I1, I2, R1, R2) based on Cell Ranger sample ID into **4 roughly equal batches**. This is done so the Cell Ranger Count pipeline does not crash the TSCC node!
 
 2. **Run the Cell Ranger/ATAC Count Pipeline**  
   If snRNAseq data  
@@ -32,7 +32,7 @@ These scripts automate and standardize the workflow for processing raw FASTQ fil
    bash run_cellranger_ATAC.sh
    ```
 
-   🚨 Three lines need to be changed each time a different batch is run 🚨 The default is for batch1. Below is example for run_cellranger.sh where the 🚨 emoji indicates it's a line that needs to be changed
+   🚨 Three lines need to be changed each time a different batch is run 🚨 The default is for **batch1**. Below is an example for run_cellranger.sh where the 🚨 emoji indicates it's a line that needs to be changed
 
 <details>
 <summary> Show example SLURM submission script</summary>
