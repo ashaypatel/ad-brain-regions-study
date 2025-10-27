@@ -24,12 +24,12 @@ These scripts automate and standardize the workflow for processing raw FASTQ fil
   If snRNAseq data  
    Run:
    ```bash
-   bash run_cellranger.sh
+   sbatch run_cellranger.sh
    ```
    If snATACseq data     
    Run:
    ```bash
-   bash run_cellranger_ATAC.sh
+   sbatch run_cellranger_ATAC.sh
    ```
 
    🚨 Three lines need to be changed each time a different batch is run 🚨 The default is for **batch1**. Below is an example for run_cellranger.sh where the 🚨 emoji indicates it's a line that needs to be changed
