@@ -91,6 +91,11 @@ These scripts automate and standardize the workflow for processing raw FASTQ fil
   </details> 
 
 3. **Combine all the files into one folder**
+   Run:
+   ```bash
+   mv mtg_h5_b1/* mtg_h5_b2/* mtg_h5_b3/* mtg_h5_b4/* mtg_h5/
+   ```
+   
 
     
 
