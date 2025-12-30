@@ -1,13 +1,13 @@
-# Cell Ranger Scripts
+# CellBender Scripts 
 
-This directory contains the **Cell Ranger scripts** used for processing single-nucleus RNA-seq (snRNA-seq) and ATAC-seq (snATAC-seq) data.  
+This directory contains the **Cellbender scripts** used to correct ambient RNA contamination 
 It also serves as a **step-by-step tutorial** for running the pipeline.
 
 ---
 
 ## Purpose
 
-These scripts automate and standardize the workflow for processing raw FASTQ files across multiple samples and batches.
+These scripts automate and standardize the workflow for performing ambient RNA correction in snRNAseq data.
 
 ---
 
