@@ -13,9 +13,9 @@ These scripts automate and standardize the workflow for performing ambient RNA c
 
 ## Usage Overview
 
-1. **Split FASTQ files into batches**  
+1. **Make a list of files(samples) to provide to CellBender**  
    Run:
    ```bash
-   bash split_fastqs.sh
+   bash make_cellbender_sample_list.sh
    ```
-   This will seperate the FASTQ files (I1, R1, R2 or I1, I2, R1, R2) based on Cell Ranger sample ID into **4 roughly equal batches**. This is done so the Cell Ranger Count pipeline does not crash the TSCC node!
+   This script creates list of files to provide to CellBender
