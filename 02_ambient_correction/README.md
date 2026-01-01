@@ -54,7 +54,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
       
 
 2. **Run CellBenderwiths a batch job**
-   Default parameters are used except for --expected-cells and --total-droplets-included, where 10000 and 30000 were used due to the information provided on the Synapse (by Sage Bionetworks) page for the target dataset. **Ensure correct paths are used and correct number of jobs are requested in #SBATCH --array**
+   Default parameters are used except for --expected-cells and --total-droplets-included, where 10000 and 30000 were used, respectively, due to the information provided on the Synapse (by Sage Bionetworks) page for the target dataset. **Ensure correct paths are used and correct number of jobs are requested in #SBATCH --array**
 
    Run:
    ```bash
@@ -174,7 +174,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
    takes care of this, it is good to make sure that the correct checkpoint files are being generated in the correct folders.
 
 4. **Check ambient RNA plots for EACH sample**
-   I created a script to extract plots and barcodes for each file. This script creates a file named **f** that needs to be transfered to your local machine. Please assess each ambient RNA plot individually. 
+   I created a script to extract plots and barcodes for each file. This script creates a file named **f** that needs to be transfered to your local machine. Please assess each ambient RNA plot individually. Further information on what plots should and should not can be ascertained here: https://cellbender.readthedocs.io/en/latest/usage/index.html. Also, its worth looking at general CellBender documentation to see if changes need to be applied to the general usage.
    ```bash
    bash copy_cellbender_files.sh
    ```
