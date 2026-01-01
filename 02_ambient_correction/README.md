@@ -53,7 +53,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
    
       
 
-2. **Run CellBenderwiths a batch job**
+2. **Run CellBender with a batch job**
    Default parameters are used except for --expected-cells and --total-droplets-included, where 10000 and 30000 were used, respectively, due to the information provided on the Synapse (by Sage Bionetworks) page for the target dataset. **Ensure correct paths are used and correct number of jobs are requested in #SBATCH --array**
 
    Run:
