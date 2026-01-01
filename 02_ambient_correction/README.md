@@ -167,7 +167,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
    </details> 
 
 3. **Use CellBender filtered bc matrices for ALL downstream analysis**
-   If the above steps are performed correctly, there should be a directory (named after the 10X_ID) for each sample in a cellbender_results folder. Inside each diretory their should be a filtered bc matrix file that will now be used for ALL downstream analysis. Ensure correct paths and files are used. **Remember CellBender does not create its own directory for each sample like Cell Ranger.** While  
+   If the above steps are performed correctly, there should be a directory (named after the 10X_ID) for each sample in a cellbender_results folder. Inside each diretory there should be a filtered bc matrix file that will now be used for ALL downstream analysis. Ensure correct paths and files are used. **Remember CellBender does not create its own directory for each sample like Cell Ranger.** While  
    ```bash
    bash cellbender_array.sh
    ```
