@@ -1,6 +1,6 @@
 # CellBender Scripts 
 
-This directory contains the **CellBender scripts** used to correct ambient RNA contamination 
+This directory contains the **CellBender scripts** used to correct ambient RNA contamination. 
 It also serves as a **step-by-step tutorial** for running the pipeline.
 
 ---
