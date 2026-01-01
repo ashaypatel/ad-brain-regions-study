@@ -62,7 +62,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
    ```
       
    <details>
-   <summary> Show example SLURM submission script</summary>
+   <summary> Show full script</summary>
    
      ```bash
      #!/bin/bash
