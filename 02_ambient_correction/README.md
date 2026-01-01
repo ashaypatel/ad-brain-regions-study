@@ -15,43 +15,43 @@ These scripts automate and standardize the workflow for performing ambient RNA c
 
 1. **Make a list of files (samples) to provide to CellBender**
    
-Run:
-```bash
-bash make_cellbender_sample_list.sh
-```
-
-This script creates list of files to provide to CellBender. R
-
-<details>
-<summary> Show example SLURM submission script</summary>
-
-```bash
-#!/bin/bash
-set -euo pipefail
-
-#🚨 Change this, for me this is the subset of h5 files for samples that I'm going to use for my
-#🚨 analytics (ie only Alzheimer's disease and pathology control samples)
-IN_ROOT="/tscc/lustre/ddn/scratch/aopatel/mtg_h5_for_analytics" 
-OUT_FILE="samples_cellbender.txt"
-
-# Sanity check
-if [[ ! -d "${IN_ROOT}" ]]; then
-    echo "[ERROR] Input directory does not exist: ${IN_ROOT}"
-    exit 1
-fi
-
-# Create sample list
-ls -d "${IN_ROOT}"/* \
-  | sort \
-  > "${OUT_FILE}"
-
-# Report
-N=$(wc -l < "${OUT_FILE}")
-echo "[INFO] Wrote ${N} samples to ${OUT_FILE}"
-```
-</details> 
-
+   Run:
+   ```bash
+   bash make_cellbender_sample_list.sh
+   ```
    
+   This script creates list of files to provide to CellBender. R
+   
+   <details>
+   <summary> Show example SLURM submission script</summary>
+   
+   ```bash
+   #!/bin/bash
+   set -euo pipefail
+   
+   #🚨 Change this, for me this is the subset of h5 files for samples that I'm going to use for my
+   #🚨 analytics (ie only Alzheimer's disease and pathology control samples)
+   IN_ROOT="/tscc/lustre/ddn/scratch/aopatel/mtg_h5_for_analytics" 
+   OUT_FILE="samples_cellbender.txt"
+   
+   # Sanity check
+   if [[ ! -d "${IN_ROOT}" ]]; then
+       echo "[ERROR] Input directory does not exist: ${IN_ROOT}"
+       exit 1
+   fi
+   
+   # Create sample list
+   ls -d "${IN_ROOT}"/* \
+     | sort \
+     > "${OUT_FILE}"
+   
+   # Report
+   N=$(wc -l < "${OUT_FILE}")
+   echo "[INFO] Wrote ${N} samples to ${OUT_FILE}"
+   ```
+   </details> 
+   
+      
 
 2. **Run CellBender as a batch job**
    Default parameters are used except for --expected-cells and --total-droplets-included, where 10000 and 30000 were used due to the information provided on the Synapse (by Sage Bionetworks) page for the target dataset. **Ensure correct paths are used and correct number of jobs are requested in #SBATCH --array**
