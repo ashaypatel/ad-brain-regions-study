@@ -22,7 +22,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
 
 2. **Run CellBender as a batch job**
 
-   <details>
+<details>
 <summary> Show example SLURM submission script</summary>
 
   ```bash
