@@ -20,7 +20,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
    bash make_cellbender_sample_list.sh
    ```
    
-   This script creates list of files to provide to CellBender. R
+   This script creates list of files to provide to CellBender.
    
    <details>
    <summary> Show example SLURM submission script</summary>
