@@ -174,7 +174,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
    takes care of this, it is good to make sure that the correct checkpoint files are being generated in the correct folders.
 
 4. **Check ambient RNA plots for EACH sample**
-   I created a script to extract plots and barcodes for each file. This script creates a file named **f** that needs to be transfered to your local machine. Please assess each ambient RNA plot individually. Further information on what plots should and should not can be ascertained here: https://cellbender.readthedocs.io/en/latest/usage/index.html. Also, its worth looking at general CellBender documentation to see if changes need to be applied to the general usage.
+   This script creates a folder named **selected_files_only** that contains barcode and ambient RNA plot information for each sample. This folder needs to be transfered to your local machine upon creation. Please assess each ambient RNA plot individually. Further information on what plots should and should not look like can be ascertained here: https://cellbender.readthedocs.io/en/latest/usage/index.html. Also, its worth looking at general CellBender documentation to see if changes need to be applied to the general usage.
    ```bash
    bash copy_cellbender_files.sh
    ```
