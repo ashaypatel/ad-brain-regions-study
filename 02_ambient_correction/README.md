@@ -29,7 +29,9 @@ This script creates list of files to provide to CellBender. R
 #!/bin/bash
 set -euo pipefail
 
-IN_ROOT="/tscc/lustre/ddn/scratch/aopatel/mtg_h5_for_analytics" #🚨 Change this, for me this is the subset of h5 files for samples that I'm going to use for my analytics (ie only Alzheimer's disease and pathology control samples)
+#🚨 Change this, for me this is the subset of h5 files for samples that I'm going to use for my
+#🚨 analytics (ie only Alzheimer's disease and pathology control samples)
+IN_ROOT="/tscc/lustre/ddn/scratch/aopatel/mtg_h5_for_analytics" 
 OUT_FILE="samples_cellbender.txt"
 
 # Sanity check
