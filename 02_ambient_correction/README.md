@@ -29,7 +29,7 @@ This script creates list of files to provide to CellBender. R
 #!/bin/bash
 set -euo pipefail
 
-IN_ROOT="/tscc/lustre/ddn/scratch/aopatel/mtg_h5_for_analytics" 🚨 Change this, for me this is the subset of h5 files for samples that I'm going to use for my analytics (ie only Alzheimer's disease and pathology control samples)
+IN_ROOT="/tscc/lustre/ddn/scratch/aopatel/mtg_h5_for_analytics" #🚨 Change this, for me this is the subset of h5 files for samples that I'm going to use for my analytics (ie only Alzheimer's disease and pathology control samples)
 OUT_FILE="samples_cellbender.txt"
 
 # Sanity check
@@ -67,7 +67,7 @@ echo "[INFO] Wrote ${N} samples to ${OUT_FILE}"
 #SBATCH -A sds195
 #SBATCH --gpus=1
 #SBATCH -t 08:00:00
-#SBATCH --array=1-103%10 🚨 Change this for your sample numbers
+#SBATCH --array=1-103%10  #🚨 Change this for your sample numbers
 #SBATCH --job-name=cellbender
 #SBATCH --output=logs/cb_%A_%a.out
 #SBATCH --error=logs/cb_%A_%a.err
