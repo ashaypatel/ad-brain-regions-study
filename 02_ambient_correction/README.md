@@ -13,7 +13,7 @@ These scripts automate and standardize the workflow for performing ambient RNA c
 
 ## Usage Overview
 
-1. **Make a list of files(samples) to provide to CellBender**
+1. **Make a list of files (samples) to provide to CellBender**
    
 Run:
 ```bash
@@ -54,7 +54,12 @@ echo "[INFO] Wrote ${N} samples to ${OUT_FILE}"
    
 
 2. **Run CellBender as a batch job**
-   Default parameters are used except for --expected-cells and --total-droplets-included, where 10000 and 30000 were used due to the information provided on the Synapse (by Sage Bionetworks) page for the target dataset. **Ensure correct paths are used and correct number of jobs are requested in #SBATCH --array** 
+   Default parameters are used except for --expected-cells and --total-droplets-included, where 10000 and 30000 were used due to the information provided on the Synapse (by Sage Bionetworks) page for the target dataset. **Ensure correct paths are used and correct number of jobs are requested in #SBATCH --array**
+
+Run:
+```bash
+bash cellbender_array.sh
+```
    
 <details>
 <summary> Show example SLURM submission script</summary>
@@ -70,7 +75,7 @@ echo "[INFO] Wrote ${N} samples to ${OUT_FILE}"
 #SBATCH --gpus=1
 #SBATCH -t 08:00:00
 #SBATCH --array=1-103%10  #🚨 Change this for your sample numbers
-#SBATCH --job-name=cellbender
+#SBATCH --job-name=cellbender 
 #SBATCH --output=logs/cb_%A_%a.out
 #SBATCH --error=logs/cb_%A_%a.err
 
@@ -161,4 +166,11 @@ ls -lh
 ```
 </details> 
 
-  print 
+3. **Use CellBender filtered bc matrices for ALL downstream analysis**
+   If the above steps are performed correctly, there should be a directory (named after the 10X_ID) for each sample in a cellbender_results folder. Inside each diretory their should be a filtered bc matrix file that will now be used for ALL downstream analysis. Ensure correct paths and files are used. **Remember CellBender does not create its own directory for each sample like Cell Ranger.** While  
+```bash
+bash cellbender_array.sh
+```
+takes care of this, it is good to make sure that the correct checkpoint files are being generated in the correct folders.
+
+4. **Check ambient RNA plots for EACH sample**
